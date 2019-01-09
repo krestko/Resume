@@ -1,26 +1,81 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import '../App.css';
 import './HomePage.css';
 
 class HomePage extends Component {
+  state = {
+    flipped: null
+  }
+
+  negState = () => {
+    this.setState({ flipped: null })
+  }
+  posState = (letter) => {
+    this.setState({ flipped: letter })
+  }
+
   render() {
+    let labelChoiceR = (flipped, letter, subject) => {
+      if(flipped !== letter || flipped === null) {
+        return letter;
+      } else {
+        return subject; 
+      }
+    }
+    let labelChoiceE = (flipped, letter, subject) => {
+      if(flipped !== letter || flipped === null) {
+        return letter;
+      } else {
+        return subject; 
+      }
+    }
+    let labelChoiceS = (flipped, letter, subject) => {
+      if(flipped !== letter || flipped === null) {
+        return letter;
+      } else {
+        return subject; 
+      }
+    }
+    let labelChoiceT = (flipped, letter, subject) => {
+      if(flipped !== letter || flipped === null) {
+        return letter;
+      } else {
+        return subject; 
+      }
+    }
+    let labelChoiceK = (flipped, letter, subject) => {
+      if(flipped !== letter || flipped === null) {
+        return letter;
+      } else {
+        return subject; 
+      }
+    }
+    let labelChoiceO = (flipped, letter, subject) => {
+      if(flipped !== letter || flipped === null) {
+        return letter;
+      } else {
+        return subject; 
+      }
+    }
+
     return (
       <div className="Grid-Container">
-        <div className="Grid-Item-1 Content">K</div>
-        <div className="Grid-Item-2 Content">A</div>
-        <div className="Grid-Item-3 Content">T</div>
-        <div className="Grid-Item-4 Content">H</div>
-        <div className="Grid-Item-5 Content">E</div>
-        <div className="Grid-Item-6 Content">R</div>
-        <div className="Grid-Item-7 Content">I</div>
-        <div className="Grid-Item-8 Content">N</div>
-        <div className="Grid-Item-9 Content">E</div>
-        <div className="Grid-Item-10 Content">R</div>
-        <div className="Grid-Item-11 Content">E</div>
-        <div className="Grid-Item-12 Content">S</div>
-        <div className="Grid-Item-13 Content">T</div>
-        <div className="Grid-Item-14 Content">K</div>
-        <div className="Grid-Item-15 Content">O</div>
+        <div className="Grid-Item-1 Content-First-Name"><p className='K'>K</p></div>
+        <div className="Grid-Item-2 Content-First-Name"><p className='A'>A</p></div>
+        <div className="Grid-Item-3 Content-First-Name"><p className='T'>T</p></div>
+        <div className="Grid-Item-4 Content-First-Name"><p className='H'>H</p></div>
+        <div className="Grid-Item-5 Content-First-Name"><p className='E'>E</p></div>
+        <div className="Grid-Item-6 Content-First-Name"><p className='R'>R</p></div>
+        <div className="Grid-Item-7 Content-First-Name"><p className='I'>I</p></div>
+        <div className="Grid-Item-8 Content-First-Name"><p className='N'>N</p></div>
+        <div className="Grid-Item-9 Content-First-Name"><p className='EE'>E</p></div>
+        <Link to={`/Paintings`} className="Grid-Item-10 Content-Last-Name" onMouseOver={() => this.posState('R')} onMouseOut = {() => this.negState()}><div>{labelChoiceR(this.state.flipped, 'R', 'PAINTINGS')}</div></Link>
+        <Link to={`/Drawings`} className="Grid-Item-11 Content-Last-Name" onMouseOver={() => this.posState('E')} onMouseOut = {() => this.negState()}><div>{labelChoiceE(this.state.flipped, 'E', 'DRAWINGS')}</div></Link>
+        <Link to={`/Collage`} className="Grid-Item-12 Content-Last-Name" onMouseOver={() => this.posState('S')} onMouseOut = {() => this.negState()}><div>{labelChoiceS(this.state.flipped, 'S', 'COLLAGE')}</div></Link>
+        <Link to={`/Sculpture`} className="Grid-Item-13 Content-Last-Name" onMouseOver={() => this.posState('T')} onMouseOut = {() => this.negState()}><div>{labelChoiceT(this.state.flipped, 'T', 'SCULPTURE')}</div></Link>
+        <Link to={`/Photography`} className="Grid-Item-14 Content-Last-Name" onMouseOver={() => this.posState('K')} onMouseOut = {() => this.negState()}><div>{labelChoiceK(this.state.flipped, 'K', 'PHTOGRAPHY')}</div></Link>
+        <Link to={`/Bio`} className="Grid-Item-15 Content-Last-Name" onMouseOver={() => this.posState('O')} onMouseOut = {() => this.negState()}><div>{labelChoiceO(this.state.flipped, 'O', 'BIO')}</div></Link>
       </div>      
     );
   }
