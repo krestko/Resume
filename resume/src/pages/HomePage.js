@@ -20,42 +20,42 @@ class HomePage extends Component {
       if(flipped !== letter || flipped === null) {
         return letter;
       } else {
-        return subject; 
+        return <p className='Hover-Subjects'>{subject}</p>;
       }
     }
     let labelChoiceE = (flipped, letter, subject) => {
       if(flipped !== letter || flipped === null) {
         return letter;
       } else {
-        return subject; 
-      }
+        return <p className='Hover-Subjects'>{subject}</p>;
+      } 
     }
     let labelChoiceS = (flipped, letter, subject) => {
       if(flipped !== letter || flipped === null) {
         return letter;
       } else {
-        return subject; 
+        return <p className='Hover-Subjects'>{subject}</p>;
       }
     }
     let labelChoiceT = (flipped, letter, subject) => {
       if(flipped !== letter || flipped === null) {
         return letter;
       } else {
-        return subject; 
+        return <p className='Hover-Subjects'>{subject}</p>;
       }
     }
     let labelChoiceK = (flipped, letter, subject) => {
       if(flipped !== letter || flipped === null) {
         return letter;
       } else {
-        return subject; 
+        return <p className='Hover-Subjects'>{subject}</p>;
       }
     }
     let labelChoiceO = (flipped, letter, subject) => {
       if(flipped !== letter || flipped === null) {
         return letter;
       } else {
-        return subject; 
+        return <p className='Hover-Subjects'>{subject}</p>;
       }
     }
 
@@ -70,12 +70,12 @@ class HomePage extends Component {
         <div className="Grid-Item-7 Content-First-Name"><p className='I'>I</p></div>
         <div className="Grid-Item-8 Content-First-Name"><p className='N'>N</p></div>
         <div className="Grid-Item-9 Content-First-Name"><p className='EE'>E</p></div>
-        <Link to={`/Paintings`} className="Grid-Item-10 Content-Last-Name" onMouseOver={() => this.posState('R')} onMouseOut = {() => this.negState()}><div>{labelChoiceR(this.state.flipped, 'R', 'PAINTINGS')}</div></Link>
-        <Link to={`/Drawings`} className="Grid-Item-11 Content-Last-Name" onMouseOver={() => this.posState('E')} onMouseOut = {() => this.negState()}><div>{labelChoiceE(this.state.flipped, 'E', 'DRAWINGS')}</div></Link>
-        <Link to={`/Collage`} className="Grid-Item-12 Content-Last-Name" onMouseOver={() => this.posState('S')} onMouseOut = {() => this.negState()}><div>{labelChoiceS(this.state.flipped, 'S', 'COLLAGE')}</div></Link>
-        <Link to={`/Sculpture`} className="Grid-Item-13 Content-Last-Name" onMouseOver={() => this.posState('T')} onMouseOut = {() => this.negState()}><div>{labelChoiceT(this.state.flipped, 'T', 'SCULPTURE')}</div></Link>
-        <Link to={`/Photography`} className="Grid-Item-14 Content-Last-Name" onMouseOver={() => this.posState('K')} onMouseOut = {() => this.negState()}><div>{labelChoiceK(this.state.flipped, 'K', 'PHTOGRAPHY')}</div></Link>
-        <Link to={`/Bio`} className="Grid-Item-15 Content-Last-Name" onMouseOver={() => this.posState('O')} onMouseOut = {() => this.negState()}><div>{labelChoiceO(this.state.flipped, 'O', 'BIO')}</div></Link>
+        <Link to={`/Paintings`} className="Grid-Item-10 Content-Last-Name" onMouseOver={() => this.posState('R')} onMouseOut = {() => this.negState()}><div className='RR'>{labelChoiceR(this.state.flipped, 'R', 'PAINTINGS')}</div></Link>
+        <Link to={`/Drawings`} className="Grid-Item-11 Content-Last-Name" onMouseOver={() => this.posState('E')} onMouseOut = {() => this.negState()}><div className='EEE'>{labelChoiceE(this.state.flipped, 'E', 'DRAWINGS')}</div></Link>
+        <Link to={`/Collage`} className="Grid-Item-12 Content-Last-Name" onMouseOver={() => this.posState('S')} onMouseOut = {() => this.negState()}><div className='S'>{labelChoiceS(this.state.flipped, 'S', 'COLLAGE')}</div></Link>
+        <Link to={`/Sculpture`} className="Grid-Item-13 Content-Last-Name" onMouseOver={() => this.posState('T')} onMouseOut = {() => this.negState()}><div className='TT'>{labelChoiceT(this.state.flipped, 'T', 'SCULPTURE')}</div></Link>
+        <Link to={`/Photography`} className="Grid-Item-14 Content-Last-Name" onMouseOver={() => this.posState('K')} onMouseOut = {() => this.negState()}><div className='KK'>{labelChoiceK(this.state.flipped, 'K', 'PHTOGRAPHY')}</div></Link>
+        <Link to={`/Bio`} className="Grid-Item-15 Content-Last-Name" onMouseOver={() => this.posState('O')} onMouseOut = {() => this.negState()}><div className='O'>{labelChoiceO(this.state.flipped, 'O', 'BIO')}</div></Link>
       </div>      
     );
   }

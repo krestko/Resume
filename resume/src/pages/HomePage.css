@@ -6,11 +6,18 @@
   align-items: center;
   background-color:#cc0000;
   color: blue;
+  font-weight: bold;
 }
 .Content-Last-Name:hover {
   background-color: #b30000;
-  outline: 2px solid blue;
+  background-color: #99ddff;
   transition: 1s;
+  box-shadow: 0px 0px 7px 5px #800000 inset;
+}
+.Hover-Subjects {
+  color: #99ddff;
+  text-shadow: 2px 2px 2px blue;
+  font-weight: bold;
 }
 a, .Content-Last-Name {
   font-family: 'Amatic SC';
@@ -30,6 +37,7 @@ a, .Content-Last-Name {
 }
 .K {
 -webkit-animation-duration: 1.5s;animation-duration: 1.5s;
+color: #99ddff;
 }
 .Grid-Item-2 {
   grid-column: 2/2;
@@ -39,7 +47,8 @@ a, .Content-Last-Name {
 }
 .A {
   -webkit-animation-delay: 1.5s; animation-delay: 1.5s;
-  -webkit-animation-duration: 1.5s; animation-duration: 1.5s; 
+  -webkit-animation-duration: 1.5s; animation-duration: 1.5s;
+  color: #00aaff;
 }
 .Grid-Item-3 {
   grid-column: 3/3;
@@ -49,7 +58,8 @@ a, .Content-Last-Name {
 }
 .T {
   -webkit-animation-delay: 3s; animation-delay: 3s;
-  -webkit-animation-duration: 1.5s; animation-duration: 1.5s; 
+  -webkit-animation-duration: 1.5s; animation-duration: 1.5s;
+  color: #0077b3;
 }
 .Grid-Item-4 {
   grid-column: 4/4;
@@ -60,6 +70,7 @@ a, .Content-Last-Name {
 .H {
   -webkit-animation-delay: 4.5s; animation-delay: 4.5s;
   -webkit-animation-duration: 1.5s; animation-duration: 1.5s; 
+  color: #3333ff;
 }
 .Grid-Item-5 {
   grid-column: 5/5;
@@ -136,6 +147,14 @@ a, .Grid-Item-15 {
   grid-row: 1/7;
 }
 .K, .A, .T, .H, .E, .R, .I, .N, .EE {
+  -webkit-animation-fill-mode: both;animation-fill-mode: both;
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
+  animation-iteration-count: infinite;
+}
+.RR, .EEE, .S, .TT, .KK, .O {
+  -webkit-animation-delay: 13.5s; animation-delay: 13.5s;
+  -webkit-animation-duration: 1.5s; animation-duration: 1.5s;
   -webkit-animation-fill-mode: both;animation-fill-mode: both;
   -webkit-animation-name: fadeOut;
   animation-name: fadeOut;
